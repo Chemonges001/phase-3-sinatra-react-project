@@ -1,11 +1,11 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
-#   # Add your routes here
-#   get '/schools' do
+  # Add your routes here
+  get '/schools' do
 
-#     School.all.to_json
-#    end
+    School.all.to_json
+   end
 
 #   get '/schools/:id' do
 #     school = School.find(params[:id])
