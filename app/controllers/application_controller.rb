@@ -11,15 +11,15 @@ class ApplicationController < Sinatra::Base
     school = School.find(params[:id])
     school.to_json(include: :students)
    end
-#   get '/students' do
-#     students = Student.all.order(:student_name)
-#      students.to_json(include: :school)
-#    end
+  get '/students' do
+    students = Student.all.order(:student_name)
+     students.to_json(include: :school)
+   end
 
-#   get '/students/:id' do
-#     student = Student.find(params[:id])
-#     student.to_json
-#    end
+  get '/students/:id' do
+    student = Student.find(params[:id])
+    student.to_json
+   end
 
 #    post "/students" do
 #       students = Student.create({student_name:params[:student_name],
