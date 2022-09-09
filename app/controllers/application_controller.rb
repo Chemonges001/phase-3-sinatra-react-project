@@ -37,9 +37,9 @@ class ApplicationController < Sinatra::Base
       student.to_json(include: :school)
   end
 
-#   delete "/students/:id" do
-#     student = Student.find(params[:id])
-#     student.destroy
-#    {message: 'student deleted from our database'}.to_json
-#   end
-# end
+  delete "/students/:id" do
+    student = Student.find(params[:id])
+    student.destroy
+   {message: 'student deleted from our database'}.to_json
+  end
+end
