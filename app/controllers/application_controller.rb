@@ -7,10 +7,10 @@ class ApplicationController < Sinatra::Base
     School.all.to_json
    end
 
-#   get '/schools/:id' do
-#     school = School.find(params[:id])
-#     school.to_json(include: :students)
-#    end
+  get '/schools/:id' do
+    school = School.find(params[:id])
+    school.to_json(include: :students)
+   end
 #   get '/students' do
 #     students = Student.all.order(:student_name)
 #      students.to_json(include: :school)
